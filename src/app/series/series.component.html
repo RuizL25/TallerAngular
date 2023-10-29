@@ -1,0 +1,32 @@
+<nav class="navbar" style="background-color: #26a2b6;">
+        <div class = "container-fluid">
+            <a class="navbar-brand" href="#" style = "color:black;">
+                <img src="https://e1.pngegg.com/pngimages/259/287/png-clipart-metrostation-tv-logo-thumbnail.png" alt="" width="30px" class="d-inline-block ">
+                TV Series
+              </a>
+        </div>
+    </nav>
+
+<div class="container-fluid" id="table">
+  <div class="col-5">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col"><b>#</b></th>
+          <th scope="col"><b>Name</b></th>
+          <th scope="col"><b>Channel</b></th>
+          <th scope="col"><b>Seasons</b></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let serie of series">
+          <th scope="row">{{serie.id}}</th>
+          <td><a href={{serie.platform}}>{{serie.name}}</a></td>
+          <td>{{serie.channel}}</td>
+          <td>{{serie.seasons}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Seasons Average : {{average}}</p>
+  </div>
+</div>
